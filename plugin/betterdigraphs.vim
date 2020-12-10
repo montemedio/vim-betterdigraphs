@@ -217,7 +217,7 @@ function! BDG_GetDigraph ()
     let digraphs = s:digraph_table
 
     " Simulate first char of two-character digraph code (with <C-K> or <ESC> to escape)...
-    call s:show_digraphs(digraphs, '?', context)
+    "call s:show_digraphs(digraphs, '?', context)
     let char1 = s:active_getchar()
 
     " Simulate second char of two-character digraph code (with <C-K> or <ESC> to escape)...
@@ -225,7 +225,7 @@ function! BDG_GetDigraph ()
         call feedkeys("\<BS>")
         return "\<C-K>\<ESC> "
     else
-        call s:show_digraphs(s:filter_digraphs(digraphs, char1), char1, context)
+        "call s:show_digraphs(s:filter_digraphs(digraphs, char1), char1, context)
         let char2 = s:active_getchar()
     endif
 
